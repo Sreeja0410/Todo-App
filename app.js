@@ -23,9 +23,8 @@ app.use(express.static("public"));
 
 app.use(bodyParser.urlencoded({extended: true}));
 
-const secret = process.env.SECRET;
 app.use(session({
-  secret: secret,
+  secret: "youcannotlookatmypassword",
   resave: true,
   saveUninitialized: true
 }));
