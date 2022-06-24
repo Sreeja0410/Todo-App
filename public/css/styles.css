@@ -15,19 +15,15 @@ body.news-html {
   background-size: cover;
   font-family:sans-serif;
   background-attachment: fixed;
-
 }
 
-.todo-body{
-  padding-bottom: 50px;
-}
-
-html.todo-html{
+html.todo-html,body.todo-html{
   background-color: #CDF0EA;
   background-image: -webkit-linear-gradient(65deg, #3AB0FF 50%, #E4E9FD 50%);
   font-family:sans-serif;
-  height: 100%;
+  height: 1000;
   background-attachment: fixed;
+  padding-bottom: 10px;
 }
 
 body.news-html {
@@ -52,7 +48,7 @@ h1{
 .box{
   max-width: 350px;
   background-color: white;
-  margin: 50px auto 100px;
+  margin: 50px auto 20%;
   border-bottom: 100px;
   border-radius: 5px;
   box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.3);
@@ -86,6 +82,7 @@ input[name="newItem"]{
   border: 0;
   height: 40px;
   font-size: 20px;
+  width: 75%;
 }
 
 input:checked+p{
@@ -106,15 +103,10 @@ input[placeholder="enter your email id"]{
   display: inline;
 }
 
-.checkbox{
-  color: black;
-  border: 3px solid black;
-}
-
 .para{
   font-size: 20px;
-  font-weight: 200;
-  color: black;
+  color: var(--color-secondary);
+  font-weight: bold;
 }
 
 form.item{
@@ -123,8 +115,6 @@ form.item{
 }
 
 .listBtn{
-  min-height: 40px;
-  width: 40px;
   border-radius: 50%;
   background-color: #3AB0FF;
   border-color: transparent;
@@ -132,8 +122,8 @@ form.item{
   color: white;
   font-size: 30px;
   border-width: 0;
-  margin-right: 20px;
-  margin-left: 10px;
+  margin: auto;
+  width: 12%;
 }
 button.btn-login{
   background-color: #3AB0FF;
