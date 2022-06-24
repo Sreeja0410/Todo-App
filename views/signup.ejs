@@ -45,10 +45,10 @@
       <%- include ("partials/messages") %>
 
       <div class="form-input-group">
-        <input name="username" type="text" class="form-input" placeholder="Username" value="<%= typeof username != "undefined" ? username: "" %>" autofocus>
+        <input name="username" type="text" class="form-input" autocomplete="off" placeholder="Username" value="<%= typeof username != "undefined" ? username: "" %>" autofocus>
       </div>
       <div class="form-input-group">
-        <input name="email" type="email" class="form-input" placeholder="Email" value="<%= typeof email != "undefined" ? email: "" %>">
+        <input name="email" type="email" class="form-input" autocomplete="off" placeholder="Email" value="<%= typeof email != "undefined" ? email: "" %>">
       </div>
       <div class="form-input-group">
         <input name="password" type="password" class="form-input" placeholder="Password" value="<%= typeof password != "undefined" ? password: "" %>">
