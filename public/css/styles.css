@@ -38,7 +38,7 @@ body.news-html {
 }
 
 .boxe{
-  max-width: 400px;
+  max-width: 350px;
   background-color: #3AB0FF;
   margin: 130px auto 10px;
   border-radius: 5px;
@@ -50,7 +50,7 @@ h1{
 }
 
 .box{
-  max-width: 400px;
+  max-width: 350px;
   background-color: white;
   margin: 50px auto 100px;
   border-bottom: 100px;
@@ -59,7 +59,7 @@ h1{
 }
 
 .box-news{
-  max-width: 400px;
+  max-width: 350px;
   padding: 15px;
   background: white;
   margin: 50px auto;
@@ -106,10 +106,15 @@ input[placeholder="enter your email id"]{
   display: inline;
 }
 
+.checkbox{
+  color: black;
+  border: 3px solid black;
+}
+
 .para{
   font-size: 20px;
   font-weight: 200;
-  color: #00204a;
+  color: black;
 }
 
 form.item{
@@ -128,29 +133,33 @@ form.item{
   font-size: 30px;
   border-width: 0;
   margin-right: 20px;
+  margin-left: 10px;
 }
 button.btn-login{
   background-color: #3AB0FF;
-  margin: 10px 130px;
-  color: #E4E9FD
-}
-
-button.btn-signup{
-  background-color: #3AB0FF;
-  margin: 10px 100px;
+  width: 50%;
+  margin: 10px 25%;
   color: #E4E9FD
 }
 
 .btn-login:hover{
   background-color: #1363DF;
-  margin: 10px 130px;
-  color: #E4E9FD
+  width: 50%;
+  margin: 10px 25%;
+  color: #E4E9FD;
+}
 
+button.btn-signup{
+  background-color: #3AB0FF;
+  width: 60%;
+  margin: 10px 20%;
+  color: #E4E9FD
 }
 
 .btn-signup:hover{
   background-color: #1363DF;
-  margin: 10px 100px;
+  width: 60%;
+  margin: 10px 20%;
   color: #E4E9FD;
 }
 
@@ -158,20 +167,16 @@ button.btn-signup{
 button.btn-reset{
   background-color: #3AB0FF;
   color: #E4E9FD;
-  margin: 10px 80px;
+  width: 60%;
+  margin: 20px 20%;
 }
 
 .btn-reset:hover{
   background-color: #1363DF;
-  margin: 10px 80px;
+  width: 60%;
+  margin: 20px 20%;
   color: #E4E9FD
 }
-
-
-
-
-
-
 
 
 /*.form-signin {
@@ -185,6 +190,7 @@ button.btn-reset{
 /* .form-signin .form-floating:focus-within {
   z-index: 2;
 } */
+
 .form-heading{
   margin-bottom: 1rem;
   text-align: center;

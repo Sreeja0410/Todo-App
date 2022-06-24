@@ -16,7 +16,7 @@
     <% for(var i=0;i< listItems.length ; i++) { %>
       <form class="" action="/delete" method="post">
         <div class="item">
-          <input type="checkbox" name="checkbox" value="<%= listItems[i] %>" onchange="this.form.submit()">
+          <input class="checkbox" type="checkbox" name="checkbox" value="<%= listItems[i] %>" onchange="this.form.submit()">
           <p class="para"> <%= listItems[i] %> </p>
         </div>
         <input type="hidden" name="userEmail" value="<%= userEmail %>"></input>
