@@ -12,7 +12,7 @@ const session = require("express-session");
 const passport = require("passport");
 
 const app = express();
-
+console.log(process.env.SECRET);
 require("./config/passport")(passport);
 
 const db= require("./config/keys.js").MongoURI;
@@ -24,7 +24,7 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(session({
-  secret: "youcannotlookatmypassword",
+  secret: process.env.SECRET,
   resave: true,
   saveUninitialized: true
 }));
