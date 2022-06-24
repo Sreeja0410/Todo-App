@@ -1,0 +1,253 @@
+html.news-html,
+body.news-html {
+  height: 100%;
+  --color-primary: #009579;
+  --color-primary-dark: #007f67;
+  --color-secondary: #252c6a;
+  --color-error: #cc3333;
+  --color-success: #4bb544;
+  --border-radius: 4px;
+  margin: 0;
+  font-size: 16px;
+  background-color: #CDF0EA;
+  align-items: center;
+  background-image: -webkit-linear-gradient(65deg, #3AB0FF 50%, #E4E9FD 50%);
+  background-size: cover;
+  font-family:sans-serif;
+  background-attachment: fixed;
+
+}
+
+.todo-body{
+  padding-bottom: 50px;
+}
+
+html.todo-html{
+  background-color: #CDF0EA;
+  background-image: -webkit-linear-gradient(65deg, #3AB0FF 50%, #E4E9FD 50%);
+  font-family:sans-serif;
+  height: 100%;
+  background-attachment: fixed;
+}
+
+body.news-html {
+  display: flex;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+}
+
+.boxe{
+  max-width: 400px;
+  background-color: #3AB0FF;
+  margin: 130px auto 10px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.3);
+}
+
+h1{
+  padding: 5px 0;
+}
+
+.box{
+  max-width: 400px;
+  background-color: white;
+  margin: 50px auto 100px;
+  border-bottom: 100px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.3);
+}
+
+.box-news{
+  max-width: 400px;
+  padding: 15px;
+  background: white;
+  margin: 50px auto;
+  border-radius: var(--border-radius);
+  box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.3);
+}
+
+
+#heading{
+  color: white;
+  text-align: center;
+}
+
+
+.item{
+  align-items:center;
+  display: flex;
+  min-height: 50px;
+  border-bottom: 1px solid #F1F1F1;
+}
+
+input[name="newItem"]{
+  background: transparent;
+  border: 0;
+  height: 40px;
+  font-size: 20px;
+}
+
+input:checked+p{
+  text-decoration: line-through;
+  text-decoration-color: #00204a;
+}
+
+input[name="newItem"]:focus{
+  outline: none;
+  box-shadow: inset 0 -3px 0 0 #3AB0FF;
+}
+
+input[type="checkbox"]{
+  margin: 20px;
+}
+
+input[placeholder="enter your email id"]{
+  display: inline;
+}
+
+.para{
+  font-size: 20px;
+  font-weight: 200;
+  color: #00204a;
+}
+
+form.item{
+  text-align: center;
+  margin-left: 20px;
+}
+
+.listBtn{
+  min-height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #3AB0FF;
+  border-color: transparent;
+  border: 0;
+  color: white;
+  font-size: 30px;
+  border-width: 0;
+  margin-right: 20px;
+}
+button.btn-login{
+  background-color: #3AB0FF;
+  margin: 10px 130px;
+  color: #E4E9FD
+}
+
+button.btn-signup{
+  background-color: #3AB0FF;
+  margin: 10px 100px;
+  color: #E4E9FD
+}
+
+.btn-login:hover{
+  background-color: #1363DF;
+  margin: 10px 130px;
+  color: #E4E9FD
+
+}
+
+.btn-signup:hover{
+  background-color: #1363DF;
+  margin: 10px 100px;
+  color: #E4E9FD;
+}
+
+
+button.btn-reset{
+  background-color: #3AB0FF;
+  color: #E4E9FD;
+  margin: 10px 80px;
+}
+
+.btn-reset:hover{
+  background-color: #1363DF;
+  margin: 10px 80px;
+  color: #E4E9FD
+}
+
+
+
+
+
+
+
+
+/*.form-signin {
+  max-width: 400px;
+  padding: 15px;
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.3);
+  background: white;
+  border-radius: var(--border-radius);
+}*/
+
+/* .form-signin .form-floating:focus-within {
+  z-index: 2;
+} */
+.form-heading{
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.form-input-group{
+  margin-bottom: 1rem;
+}
+
+.form-btn{
+  margin-bottom: 1rem;
+}
+
+.form-message-error{
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--color-error);
+}
+
+.form-message-success{
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--color-success);
+}
+
+.form-input-error-p{
+  color: var(--color-error);
+  border-color: var(--color-error);
+}
+
+.form-input{
+  width: 100%;
+  display: block;
+  padding: 0.5rem;
+  box-sizing:border-box;
+  border-radius: var(--border-radius);
+  border: 1px solid #dddddd;
+  outline: none;
+  background: #eeeeee;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.form-input:focus{
+  border-color: #9DD6DF;
+  background: #ffffff;
+}
+
+.form-btn:active{
+  transform: scale(0.98);
+}
+.form-text{
+  text-align: center;
+}
+.form-link{
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+.form-link:hover{
+  text-decoration: underline;
+}
+
+
+::placeholder{
+  color: grey;
+  opacity: 1;
+}
