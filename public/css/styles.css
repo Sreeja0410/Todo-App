@@ -26,6 +26,15 @@ html.todo-html,body.todo-html{
   padding-bottom: 10px;
 }
 
+@media (max-width: 600px){
+  div.boxe-todo{
+    max-width: 90%;
+  }
+  div.box-todo{
+    max-width: 90%;
+  }
+}
+
 body.news-html {
   display: flex;
   padding-top: 40px;
