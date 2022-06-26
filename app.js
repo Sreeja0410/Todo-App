@@ -53,7 +53,7 @@ mongoose.connect(db)
 const User = require("./models/User.js")
 
 const defaultItems = ["Welcome to your todo list",
- "Click + button to add an item",
+ "Press enter to add an item",
   "<-- click this to delete an item"];
 
 let today = new Date();
