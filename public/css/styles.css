@@ -39,6 +39,10 @@ img{
   div.box-todo{
     max-width: 90%;
   }
+  div.boxe2-todo{
+    max-width: 90%;
+  }
+
 }
 
 body.news-html {
@@ -69,6 +73,14 @@ h1{
   border-radius: 5px;
   box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.3);
 }
+.boxe2-todo{
+  max-width: 50%;
+  font-size: 15px;
+  background-color: white;
+  margin: 20px auto 10px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.3);
+}
 
 
 .box-todo{
@@ -95,6 +107,7 @@ h1{
 #heading{
   color :  var(--color-secondary);
   text-align: center;
+  font-family: 'Anek Malayalam', sans-serif;
 }
 
 
@@ -179,19 +192,6 @@ button.btn-reset{
   color: grey;
   margin-bottom: 0;
 }
-
-
-/*.form-signin {
-  max-width: 400px;
-  padding: 15px;
-  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.3);
-  background: white;
-  border-radius: var(--border-radius);
-}*/
-
-/* .form-signin .form-floating:focus-within {
-  z-index: 2;
-} */
 
 .form-heading{
   margin-bottom: 1rem;

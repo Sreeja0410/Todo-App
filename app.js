@@ -261,14 +261,6 @@ app.post("/reset-password", function(req,res){
            .catch(err => console.log(err));
 
         }))
-
-        // User.updateOne({email:thisEmail},{$set: {"password":"qwertyui"} } ,function(err){
-        //   if(err){
-        //     console.log(err);
-        //   } else{
-        //     console.log("successfully changed");
-        //   }
-        // })
       }
     })
     // console.log("all set");
@@ -283,8 +275,3 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT,function(){
   console.log("server is running on port 3000");
 });
-
-
-// dc8e52e9e6f98020e9938780281fed1c-us14
-
-// db59a4a61d
