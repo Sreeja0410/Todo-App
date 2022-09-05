@@ -48,17 +48,23 @@
   <div class="box-todo">
     <% for(var i=0;i< listItems.length ; i++) { %>
       <form class="" action="/delete" method="post">
+        <button class="delBtn" type="submit" name="button" value="<%= listItems[i] %>" ><i class="fa-solid fa-trash"></i></button>
         <div class="item">
-          <input class="checkbox" type="checkbox" name="checkbox" value="<%= listItems[i] %>" onchange="this.form.submit()">
+
+          <input class="checkbox" type="checkbox">
           <p class="para" id="para"> <%= listItems[i] %> </p>
+
         </div>
+
         <input type="hidden" name="userEmail" value="<%= userEmail %>"></input>
+
+
       </form>
 
     <% } %>
     <form class="item" action="/todo" method="post">
       <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
-      <button id="listBtn" class="btn btn-secondary" type="submit" name="btn" value="<%= userEmail %>">+</button>
+      <button id="btnSubmit" class="btn btn-outline-dark btnSubmit" type="submit" name="btn" value="<%= userEmail %>">+</button>
     </form>
 
   </div>

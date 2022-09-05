@@ -156,6 +156,10 @@ input[placeholder="enter your email id"]{
   word-break: break-all;
 }
 
+#btnSubmit{
+  visibility: hidden;
+}
+
 form.item{
   text-align: center;
   margin-left: 20px;
@@ -165,8 +169,13 @@ form.item{
   text-align: center;
 }
 
-#listBtn{
-  visibility: hidden;
+
+
+.delBtn{
+  margin-top: 10px;
+  display: inline;
+  float: right;
+  border: none;
 }
 
 button.btn-login{

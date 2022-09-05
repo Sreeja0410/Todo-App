@@ -47,8 +47,8 @@ app.use((req,res,next) => {
 
 
 mongoose.connect(db)
-// .then(() => console.log("alll ok"))
-// .catch(err => console.log(err));
+.then(() => console.log("alll ok"))
+.catch(err => console.log(err));
 
 const User = require("./models/User.js")
 
@@ -67,6 +67,8 @@ let day = today.toLocaleDateString("en-US",options);
 app.get("/",function(req,res){
   res.render("login");
 });
+
+
 
 app.get("/login",function(req,res){
   res.render("login");
@@ -118,8 +120,8 @@ app.post("/todo", function(req,res){
 
 app.post("/delete", function(req,res){
   const userEmail = req.body.userEmail;
-  const deleteItem = req.body.checkbox;
-  // console.log(userEmail, deleteItem);
+  const deleteItem = req.body.button;
+  //console.log(userEmail, deleteItem);
 
   User.findOneAndUpdate({email: userEmail}, {$pull:{lists:deleteItem}}, function(err,foundItem){
     if(!err){
@@ -261,6 +263,7 @@ app.post("/reset-password", function(req,res){
            .catch(err => console.log(err));
 
         }))
+
       }
     })
     // console.log("all set");
