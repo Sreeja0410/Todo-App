@@ -62,6 +62,8 @@ let options = {
   day: "numeric",
   month: "long"
 };
+let year = today.getFullYear();
+//console.log(year);
 let day = today.toLocaleDateString("en-US",options);
 
 app.get("/",function(req,res){
@@ -71,7 +73,9 @@ app.get("/",function(req,res){
 
 
 app.get("/login",function(req,res){
-  res.render("login");
+  res.render("login",{
+    listYear:year
+  });
 });
 
 app.get("/email-check", function(req,res){
@@ -80,7 +84,9 @@ app.get("/email-check", function(req,res){
 
 
 app.get("/signup",function(req,res){
-  res.render("signup");
+  res.render("signup",{
+    listYear:year
+  });
 });
 
 const {ensureAuthenticated} = require("./config/auth.js");
@@ -90,7 +96,7 @@ app.get("/todo",ensureAuthenticated,(req,res) => {
   User.findOne({email: thisEmail}, function(err, foundUser){
     if(!err){
       res.render("todo",{
-        listItems:foundUser.lists, listTitle: day,userEmail: thisEmail
+        listItems:foundUser.lists,listYear:year, listTitle: day,userEmail: thisEmail
       })
     }
   })
