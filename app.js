@@ -62,13 +62,13 @@ let options = {
   day: "numeric",
   month: "long"
 };
-let year = today.getFullYear();
+let listYear = today.getFullYear();
 //console.log(year);
 let day = today.toLocaleDateString("en-US",options);
 
 app.get("/",function(req,res){
   res.render("login",{
-    listYear:year
+    listYear
   });
 });
 
@@ -76,7 +76,7 @@ app.get("/",function(req,res){
 
 app.get("/login",function(req,res){
   res.render("login",{
-    listYear:year
+    listYear
   });
 });
 
@@ -87,7 +87,7 @@ app.get("/email-check", function(req,res){
 
 app.get("/signup",function(req,res){
   res.render("signup",{
-    listYear:year
+    listYear
   });
 });
 
@@ -98,7 +98,7 @@ app.get("/todo",ensureAuthenticated,(req,res) => {
   User.findOne({email: thisEmail}, function(err, foundUser){
     if(!err){
       res.render("todo",{
-        listItems:foundUser.lists,listYear:year, listTitle: day,userEmail: thisEmail
+        listItems:foundUser.lists,listYear, listTitle: day,userEmail: thisEmail
       })
     }
   })
@@ -167,7 +167,7 @@ app.post("/signup",function(req,res){
 
   if(errors.length>0){
     res.render("signup",{
-      errors,username,email,password,cpassword
+      errors,username,email,password,cpassword,listYear
     });
   }else{
     User.findOne({email:email})
@@ -175,7 +175,7 @@ app.post("/signup",function(req,res){
       if(user){
         errors.push({msg:"Email is already registered"})
         res.render("signup",{
-          errors,username,email,password,cpassword
+          errors,username,email,password,cpassword,listYear
         });
       } else{
         const newUser = new User({
