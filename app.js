@@ -67,7 +67,9 @@ let year = today.getFullYear();
 let day = today.toLocaleDateString("en-US",options);
 
 app.get("/",function(req,res){
-  res.render("login");
+  res.render("login",{
+    listYear:year
+  });
 });
 
 
