@@ -8,7 +8,8 @@ const mongoose = require("mongoose");
 const flash = require("connect-flash");
 
 const bcrypt = require("bcryptjs")
-const session = require("cookie-session");
+const session = require("express-session");
+const MongoStore = require('connect-mongo');
 const passport = require("passport");
 
 const app = express();
@@ -26,6 +27,7 @@ const secret=process.env.SECRET;
 
 app.use(session({
   secret: process.env.SECRET,
+  store: MongoStore.create({ mongoUrl:db }),
   resave: true,
   saveUninitialized: true
 }));
