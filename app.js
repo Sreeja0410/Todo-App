@@ -8,7 +8,7 @@ const mongoose = require("mongoose");
 const flash = require("connect-flash");
 
 const bcrypt = require("bcryptjs")
-const session = require("express-session");
+const session = require("cookie-session");
 const passport = require("passport");
 
 const app = express();
