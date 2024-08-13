@@ -16,7 +16,9 @@ const app = express();
 
 require("./config/passport")(passport);
 
-const db= require("./config/keys.js").MongoURI;
+//const db= require("./config/keys.js").MongoURI;
+const db = process.env.MongoURI;
+//console.log(db1);
 //app.use(expressLayouts);
 app.set('view engine', 'ejs');
 
@@ -27,7 +29,7 @@ const secret=process.env.SECRET;
 
 app.use(session({
   secret: process.env.SECRET,
-  store: MongoStore.create({ mongoUrl:db }),
+  //store: MongoStore.create({ mongoUrl: MongoUR }),
   resave: true,
   saveUninitialized: true
 }));
@@ -54,9 +56,9 @@ mongoose.connect(db)
 
 const User = require("./models/User.js")
 
-const defaultItems = ["Welcome to your todo list",
+const defaultItems = ["Glad you came here to manage your tasks!!",
  "Press enter to add an item",
-  "<-- click this to delete an item"];
+  "<-- click this check box once you completed your tasks"];
 
 let today = new Date();
 let options = {
